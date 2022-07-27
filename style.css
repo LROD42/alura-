@@ -11,7 +11,9 @@
     --cinza-secundario: #c0c0c0;
     --botao-azul: #167bf7;
     --cor-de-fundo: #00030c;
+    --botao-azul: #3c92fa;
     --fonte-principal: 'inter', sans-serif;
+
 }
 
 *{
@@ -19,6 +21,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 
 body{
@@ -29,17 +32,31 @@ body{
     font-weight: 400;
 }
 
+a{
+    color: white;
+}
+
+/* -- MAIN -- */
 
 .principal{
     background-image: url(./img/Background.png);
     background-repeat: no-repeat;
     background-size: contain;
+    align-items: center;
 }
 
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
 .container{
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+.container__caixa{
+    margin: 0 6em;
 }
 
 .container__botao{
@@ -48,7 +65,13 @@ body{
     padding: 1em; 
     color: var(--branco-principal);
     display: block;
-    
+    text-decoration: none;
+    margin-bottom: 1em;    
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul);
+    color: var(--cor-de-fundo);
 }
 
 .botao_secundario{
@@ -59,4 +82,98 @@ body{
 .container__aviso{
     font-size: 12px;
     color: var(--cinza-secundario);
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+/* -- SECUNDARIO -- */
+
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__imagem{
+    width: 80%;
+
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+
+.dispositivos{
+    text-align: center;
+    
+}
+
+.dispositivos__titulos {
+    font-size:48px;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0;
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+
+.rodape{
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista{
+    display:flex;
+    justify-content: center;
+    margin: 2em 0;
+    gap: 1em;
+
+}
+
+.lista__link{
+    color: var(--branco-principal);
+    font-size: 0.8;
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.rodape__texto{
+    width: 75%;
+    margin: 0 auto;
+    font-size: .8em;
+    padding: 1em;
+
 }
